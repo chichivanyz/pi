@@ -1,3 +1,4 @@
+
 namespace App.Variables.AreaOfCircle;
 
 /// <summary>
@@ -7,8 +8,11 @@ public static class AreaOfCircle
 {
     public static double Calculate(double radius)
     {
-        // Подсказка: используйте Math.PI и возведение в квадрат radius * radius.
-        // Об ошибочных значениях: отрицательный радиус считается некорректным входом.
-        throw new NotImplementedException();
+        if (radius < 0)
+        {
+            throw new ArgumentException("Радиус не может быть отрицательным", nameof(radius));
+        }
+
+        return Math.PI * radius * radius;
     }
 }

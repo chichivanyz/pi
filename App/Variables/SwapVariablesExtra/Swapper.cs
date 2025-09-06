@@ -9,9 +9,8 @@ public static class Swapper
     /// Возвращает кортеж со значениями a и b, поменянными местами.
     /// Ожидаемое поведение см. в тестах.
     /// </summary>
-    public static (int a, int b) Swap(int a, int b)
+    public static (int a, int b) Snap(int a, int b)
     {
-        // Реализацию нужно написать студенту. Например, можно использовать кортежи.
-        throw new NotImplementedException();
+        return (b, a);
     }
 }
